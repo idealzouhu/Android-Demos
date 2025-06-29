@@ -11,6 +11,7 @@
 本部分包含了[ Android Basics with Compose  | Android Developers](https://developer.android.google.cn/courses/android-basics-compose/course?hl=zh-cn) 中的使用案例。
 
 - [HelloWorld](HelloWorld\app\src\main\res\docs\README.md) : 创建 Hello World 项目，了解 Android 项目的基本构建流程。
+- [HappyBirthday](HappyBirthday\app\src\main\res\docs\README.md) : 构建一个显示文本和图像、界面简单的生日贺卡应用，学习如何添加文本和图片。
 
 
 
