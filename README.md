@@ -13,6 +13,7 @@
 - [HelloWorld](HelloWorld\docs\README.md) : 创建 Hello World 项目，了解 Android 项目的基本构建流程。
 - [HappyBirthday](HappyBirthday\docs\README.md) : 构建一个显示文本和图像、界面简单的生日贺卡应用，学习如何添加文本和图片。
 - [DiceRoller](DiceRoller\docs\README.md) : 创建掷骰子应用，了解如何在 Android 应用中响应按钮点击。
+- [TipCalculator](TipCalculator) : 创建一个根据用户输入来计算小费的小费计算器应用，了解如何使用状态来显示数据并在数据更新时自动反映更改。
 
 
 
