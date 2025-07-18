@@ -38,6 +38,7 @@
 - [MarsPhotos](MarsPhotos) ：采用 `Retrofit` 获取互联网数据，并利用 `kotlinx.serialization` 转换器将 JSON 对象转换为 Kotlin 对象，同时使用  Coil 下载和显示图片。同时，了解如何将代码设计成界面层和数据层，并使用容器和 `Application` 类来实现依赖注入。
 -  [Inventory](Inventory\docs\README.md) ：使用 `Room` 库在 Android 应用中轻松创建和使用关系型数据库 SQLite。
 -  [DessertRelease](DessertRelease\docs\README.md) : 利用`Preferences DataStore` 存储键值对，并了解如何使用 DataStore 在设备上存储用户偏好设置。
+-  [WorkManager](WorkManager\docs\README.md) : 了解何时以及如何使用 WorkManager 处理后台工作，并学会使用后台任务检查器调试 WorkManager。
 
 
 
