@@ -24,6 +24,7 @@
 -   [Unscramble](Unscramble) : 创建一款猜词游戏，了解应用架构以及如何使用 ViewModel、UI State 和 StateFlow 来保存应用数据，并编写自动化测试。
 -   [Cupcake](Cupcake\docs\README.md): 创建一款购买蛋糕的应用，了解如何使用 Navigation 组件构建包含更多屏幕的更复杂的应用，以及如何在不同屏幕之间进行导航和数据传递。
 -   [Reply](Reply\docs\README.md) : 创建一款类似于电子邮件客户端的应用，学习如何让应用适应不同的屏幕尺寸、提供更好的用户体验，以及如何测试自适应界面。
+-   : 了解使用 Android View 构建应用的基础知识，以及如何在通过 View 构建的应用中添加 Compose。
 
 
 
@@ -39,6 +40,7 @@
 -  [Inventory](Inventory\docs\README.md) ：使用 `Room` 库在 Android 应用中轻松创建和使用关系型数据库 SQLite。
 -  [DessertRelease](DessertRelease\docs\README.md) : 利用`Preferences DataStore` 存储键值对，并了解如何使用 DataStore 在设备上存储用户偏好设置。
 -  [WorkManager](WorkManager\docs\README.md) : 了解何时以及如何使用 WorkManager 处理后台工作，并学会使用后台任务检查器调试 WorkManager。
+-  [QRcode](QRcode) ：了解如何使用 `zxing-android-embedded` 扫码。
 
 
 
