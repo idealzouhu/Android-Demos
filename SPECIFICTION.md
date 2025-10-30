@@ -27,6 +27,8 @@ di-framework            # 依赖注入框架专题
 
 **格式**：`功能-技术栈-语言-UI框架`
 
+> 在官方的 Android 案例中，推荐的命名格式是 帕斯卡命名法。但是，为了方便使用，本项目统一采用连字符
+
 **组成部分**：
 
 1. **功能**：`qrcode`, `camera`, `network`等
@@ -42,6 +44,7 @@ qrcode-mlkit-java-view          # ML Kit + Java + View
 camera-camerax-kotlin-compose   # CameraX + Kotlin + Compose
 network-retrofit-kotlin         # Retrofit + Kotlin（纯逻辑）
 database-room-kotlin            # Room + Kotlin（纯逻辑）
+
 ```
 
 
@@ -83,11 +86,15 @@ database-room-kotlin            # Room + Kotlin（纯逻辑）
 
 
 
-#### 2.1.2 注意事项
+#### 2.1.2 项目组织原则
 
-同时，建议技术专题下的所有项目都是完整可运行的独立案例，有自己的配置。不推荐单项目多模块
+1. **独立可运行**：技术专题下的每个项目都是完整的独立案例，包含完整的配置和构建脚本
 
+2. **技术对比导向**：相关技术实现集中在同一专题下，便于横向比较
+   - ✅ 正确示例：`networking/`专题包含 Retrofit、Ktor、Volley 等多种实现
+   - ❌ 避免：为每个网络库创建单独的技术专题
 
+3. **学习路径清晰**：项目排列体现从基础到进阶的学习顺序，便于循序渐进学习
 
 
 
@@ -111,6 +118,8 @@ database-room-kotlin            # Room + Kotlin（纯逻辑）
 #### 2.2.1 具体项目级文档
 
 **`README.md`** - 项目说明
+
+可以添加一下学习目标。
 
 ```
 # 项目名称
@@ -136,3 +145,17 @@ database-room-kotlin            # Room + Kotlin（纯逻辑）
 [简要说明]
 ```
 
+
+
+
+
+
+
+## 三、实际案例
+
+在 android studio 创建项目的过程中，
+
+- **Name**: `listview-basic-java-view`
+- **Package Name**: `com.example.listview.basic`
+
+- **Save Location**: `F:\Android-Demos\list-view\listview-basic-java-view`
