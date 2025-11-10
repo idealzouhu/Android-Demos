@@ -22,7 +22,7 @@
 
 ### (3) Android 基础教程
 
-- [activity-lifecycle](android-fundamentals\activity-lifecycle\docs\README.md) : 了解 Activity 的生命周期。
+- [activity-lifecycle](android-fundamentals\activity-lifecycle\docs\README.md) : 学习 Activity 的基本使用方法，并了解 Activity 的生命周期。
 
 
 

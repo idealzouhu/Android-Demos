@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Intent 使用示例"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!-- 1. 显式Intent按钮 -->
+    <Button
+        android:id="@+id/btn_explicit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1. 显式Intent - 启动内部Activity"
+        android:textAllCaps="false"
+        android:backgroundTint="#2196F3"
+        android:textColor="@android:color/white"
+        style="@style/Widget.AppCompat.Button"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="24dp" />
+
+    <!-- 2. 隐式Intent - 外部浏览器 -->
+    <Button
+        android:id="@+id/btn_implicit_browser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="2. 隐式Intent - 启动外部浏览器"
+        android:textAllCaps="false"
+        android:backgroundTint="#4CAF50"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/btn_explicit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="8dp" />
+
+    <!-- 3. 隐式Intent - 内部WebView -->
+    <Button
+        android:id="@+id/btn_implicit_internal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="3. 隐式Intent - 启动内部WebView"
+        android:textAllCaps="false"
+        android:backgroundTint="#FF9800"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/btn_implicit_browser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="8dp" />
+
+    <!-- 4. 隐式Intent - 拨打电话 -->
+    <Button
+        android:id="@+id/btn_call"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="4. 隐式Intent - 拨打电话"
+        android:textAllCaps="false"
+        android:backgroundTint="#F44336"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/btn_implicit_internal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="8dp" />
+
+    <!-- 5. 数据传递 -->
+    <Button
+        android:id="@+id/btn_data_transfer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="5. 启动Activity并传递数据"
+        android:textAllCaps="false"
+        android:backgroundTint="#9C27B0"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/btn_call"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="8dp" />
+
+    <!-- 6. 返回结果 -->
+    <Button
+        android:id="@+id/btn_start_for_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="6. 启动Activity并期待返回结果"
+        android:textAllCaps="false"
+        android:backgroundTint="#607D8B"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/btn_data_transfer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="8dp" />
+
+    <!-- 分隔线 -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        app:layout_constraintTop_toBottomOf="@id/btn_start_for_result"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="24dp" />
+
+    <!-- 结果显示标题 -->
+    <TextView
+        android:id="@+id/tv_result_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="返回结果:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="16dp" />
+
+    <!-- 结果显示区域 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@id/tv_result_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="返回结果将显示在这里..."
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:padding="16dp"
+            android:minHeight="120dp"
+            android:gravity="center" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Activity Basic Demo</string>
+    <string name="action_settings">设置</string>
+    <string name="action_search">搜索</string>
+    <string name="action_share">分享</string>
+    <string name="action_about">关于</string>
+    <string name="main_title">主页面</string>
+    <string name="welcome_message">欢迎使用 Activity 基础演示</string>
+</resources>
