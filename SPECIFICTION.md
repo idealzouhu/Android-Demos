@@ -58,7 +58,6 @@ database-room-kotlin            # Room + Kotlin（纯逻辑）
 ├── 📱 功能-技术栈-语言-UI框架1/      # 具体实现项目1
 ├── 📱 功能-技术栈-语言-UI框架2/      # 具体实现项目2
 ├── 📁 docs/                       # 📍 集中文档目录
-│   ├── 📄 README.md               # 技术基础知识与项目索引
 │   ├── 📄 ARCHITECTURE.md         # 架构设计分析
 │   ├── 📄 COMPARISON.md           # 技术实现对比分析
 │   ├── 📄 BENCHMARK.md            # 性能测试数据对比
@@ -66,7 +65,7 @@ database-room-kotlin            # Room + Kotlin（纯逻辑）
 │   └── 📁 screenshots/            # 所有项目截图
 │       ├── 项目1截图/
 │       └── 项目2截图/
-├── 📄 README.md                   # 专题总览
+├── 📄 README.md                   # 专题总览，技术基础知识与项目索引
 └── 📄 CHOICE_GUIDE.md             # 技术选型指南
 ```
 
@@ -74,15 +73,51 @@ database-room-kotlin            # Room + Kotlin（纯逻辑）
 
 #### 2.1.1 技术专题级文档（在 `docs/`目录下）
 
-**`README.md`** - 技术基础与项目索引
-
-
-
 项目效果截图：
 
 - 建议放在 COMPARSION 文档里面。
 
 - 或者分开放在每个项目的具体实现文档里面。
+
+
+
+项目实现文档
+
+```
+## 专题总览
+
+研究 Broadcast 的使用方法
+
+
+
+### 基础知识
+
+- [Broadcast 概述.md](Broadcast 概述.md) 
+
+
+
+### 实现项目
+
+- [broadcast-basic-java-view 项目实现.md](broadcast-basic-java-view 项目实现.md) : broadcast 的基本使用方法。
+
+- [force-offline-java-view 项目实现.md](force-offline-java-view 项目实现.md) : 利用 Activity最佳实践和广播机制在不同界面间实现统一的行为控制,  即强制离线处理。
+
+
+
+```
+
+
+
+#### 2.1.2 专题总览文档
+
+**`README.md`** 文档的内容如下：
+
+```
+### 专题总览
+研究xxx的使用方法
+```
+
+
 
 
 
@@ -95,6 +130,10 @@ database-room-kotlin            # Room + Kotlin（纯逻辑）
    - ❌ 避免：为每个网络库创建单独的技术专题
 
 3. **学习路径清晰**：项目排列体现从基础到进阶的学习顺序，便于循序渐进学习
+
+
+
+
 
 
 

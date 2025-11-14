@@ -91,3 +91,12 @@ activity 生命周期中的每种状态都有一个对应的回调方法，您�
 
 
 
+
+
+## Activity 最佳实践
+
+1. 创建 BaseActivity， 成为ActivityTest项目中所有Activity的父类。这样做的好处有可以知晓当前是在哪一个 Activity。
+
+2. 创建 ActivityCollector， 使用专门的集合对所有的 Activity 进行管理。这样可以随时随地地退出程序。
+3. 启动 Activity 的最佳写法，即将启动Activity 的方法放在被启动的 Activity 里面。
+
