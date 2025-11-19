@@ -81,7 +81,29 @@ database-room-kotlin            # Room + Kotlin（纯逻辑）
 
 
 
-项目实现文档
+技术项目实现文档
+
+```
+## 项目概述
+
+### 核心实现思路
+
+### 关键组件
+
+### 项目结构
+
+
+## 功能模块详解
+
+
+## 问题
+```
+
+
+
+#### 2.1.2 专题总览文档
+
+**`README.md`** 文档的内容如下：
 
 ```
 ## 专题总览
@@ -101,20 +123,6 @@ database-room-kotlin            # Room + Kotlin（纯逻辑）
 - [broadcast-basic-java-view 项目实现.md](broadcast-basic-java-view 项目实现.md) : broadcast 的基本使用方法。
 
 - [force-offline-java-view 项目实现.md](force-offline-java-view 项目实现.md) : 利用 Activity最佳实践和广播机制在不同界面间实现统一的行为控制,  即强制离线处理。
-
-
-
-```
-
-
-
-#### 2.1.2 专题总览文档
-
-**`README.md`** 文档的内容如下：
-
-```
-### 专题总览
-研究xxx的使用方法
 ```
 
 
