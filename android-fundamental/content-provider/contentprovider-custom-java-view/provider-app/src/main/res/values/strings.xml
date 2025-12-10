@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">provider-app</string>
+    <string name="read_books_label">读取书籍</string>
+    <string name="read_books_description">允许应用读取书籍数据</string>
+    <string name="write_books_label">写入书籍</string>
+    <string name="write_books_description">允许应用写入书籍数据</string>
+</resources>
