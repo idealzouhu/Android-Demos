@@ -2,7 +2,7 @@
 
 ## 一、什么是 MediaPlayer
 
-[MediaPlayer](https://developer.android.com/reference/android/media/MediaPlayer#developer-guides) 可以用于播放网络、本地以及应用程序安装包中的音频。这三种方式的区别在于**数据源设置、访问权限、缓冲机制、错误处理和性能**等方面。
+[MediaPlayer](https://developer.android.com/reference/android/media/MediaPlayer#developer-guides) 可以用于播放网络、本地以及应用程序安装包中的音视频。这三种方式的区别在于**数据源设置、访问权限、缓冲机制、错误处理和性能**等方面。
 
 | 特性           | 网络音频                                                     | 本地音频                                                     | 应用资源音频                                                 |
 | ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -21,6 +21,8 @@
 
 
 ## 二、MediaPlayer 常用 API
+
+在使用 MediaPlayer 的过程中，我们想要了解 MediaPlayer 的状态机。
 
 ![MediaPlayer State diagram](images/mediaplayer_state_diagram.gif)
 
