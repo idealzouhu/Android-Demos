@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- 固定在顶部的标题栏 -->
+    <LinearLayout
+        android:id="@+id/title_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#2196F3"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 应用标题 -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_gravity="center"
+            android:text="通知功能演示"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+    <!-- 可滚动的中间内容区域 -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/title_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/status_container"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp">
+
+            <!-- 基本通知控制区 -->
+            <LinearLayout
+                android:id="@+id/basic_notification_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:padding="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="基本通知控制"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <Button
+                    android:id="@+id/btn_simple_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="发送简单通知"
+                    android:textSize="16sp"
+                    android:backgroundTint="#4CAF50"
+                    android:textColor="@android:color/white"
+                    android:drawableStart="@android:drawable/ic_menu_send"
+                    android:drawablePadding="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/btn_bigtext_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="发送大文本通知"
+                    android:textSize="16sp"
+                    android:backgroundTint="#2196F3"
+                    android:textColor="@android:color/white"
+                    android:drawableStart="@android:drawable/ic_menu_view"
+                    android:drawablePadding="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/btn_bigpicture_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="发送大图片通知"
+                    android:textSize="16sp"
+                    android:backgroundTint="#FF9800"
+                    android:textColor="@android:color/white"
+                    android:drawableStart="@android:drawable/ic_menu_gallery"
+                    android:drawablePadding="8dp"/>
+
+            </LinearLayout>
+
+            <!-- 进度通知控制区 -->
+            <LinearLayout
+                android:id="@+id/progress_notification_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/basic_notification_container"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="进度通知控制"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <Button
+                        android:id="@+id/btn_start_progress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="开始进度通知"
+                        android:textSize="16sp"
+                        android:backgroundTint="#009688"
+                        android:textColor="@android:color/white"
+                        android:layout_marginEnd="8dp"/>
+
+                    <Button
+                        android:id="@+id/btn_cancel_progress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="取消进度"
+                        android:textSize="16sp"
+                        android:backgroundTint="#F44336"
+                        android:textColor="@android:color/white"/>
+
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/seekbar_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="0"
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+
+            <!-- 操作通知控制区 -->
+            <LinearLayout
+                android:id="@+id/action_notification_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/progress_notification_container"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="操作按钮通知"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <Button
+                    android:id="@+id/btn_action_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="发送带操作的通知"
+                    android:textSize="16sp"
+                    android:backgroundTint="#9C27B0"
+                    android:textColor="@android:color/white"
+                    android:drawableStart="@android:drawable/ic_menu_share"
+                    android:drawablePadding="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/btn_reply_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="发送可回复通知"
+                    android:textSize="16sp"
+                    android:backgroundTint="#E91E63"
+                    android:textColor="@android:color/white"
+                    android:drawableStart="@android:drawable/ic_menu_edit"
+                    android:drawablePadding="8dp"/>
+
+            </LinearLayout>
+
+            <!-- 通知管理区 -->
+            <LinearLayout
+                android:id="@+id/management_notification_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/action_notification_container"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="通知管理"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <Button
+                        android:id="@+id/btn_cancel_notification"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="取消通知"
+                        android:textSize="16sp"
+                        android:backgroundTint="#607D8B"
+                        android:textColor="@android:color/white"
+                        android:layout_marginEnd="8dp"/>
+
+                    <Button
+                        android:id="@+id/btn_cancel_all"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="取消所有通知"
+                        android:textSize="16sp"
+                        android:backgroundTint="#795548"
+                        android:textColor="@android:color/white"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- 固定在底部的状态栏 -->
+    <LinearLayout
+        android:id="@+id/status_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"/>
+
+        <!-- 状态显示 -->
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_gravity="center"
+            android:text="准备发送通知..."
+            android:textSize="14sp"
+            android:textColor="#666"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
