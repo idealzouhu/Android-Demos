@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">handler-ui-java-view</string>
+
+    <!-- 按钮文字 -->
+    <string name="send_message">发送Message</string>
+    <string name="send_runnable">发送Runnable</string>
+    <string name="delayed_message">延时消息</string>
+    <string name="handler_thread_test">HandlerThread测试</string>
+    <string name="clear_messages">清除消息</string>
+    <string name="clear_log">清空日志</string>
+
+    <!-- 状态文字 -->
+    <string name="status_ready">就绪，点击下方按钮开始测试</string>
+    <string name="status_processing">处理中</string>
+    <string name="status_completed">任务完成</string>
+    <string name="waiting_message">等待接收消息...</string>
+
+    <!-- 标题 -->
+    <string name="title_app">Handler消息机制演示</string>
+    <string name="title_basic_operations">基础消息操作</string>
+    <string name="title_advanced_operations">高级操作</string>
+    <string name="title_log">操作日志</string>
+    <string name="title_message_content">消息内容</string>
+
+    <!-- 标签 -->
+    <string name="counter">计数器</string>
+    <string name="progress">进度</string>
+
+    <!-- 默认文本 -->
+    <string name="log_default">日志记录：\n</string>
+</resources>
