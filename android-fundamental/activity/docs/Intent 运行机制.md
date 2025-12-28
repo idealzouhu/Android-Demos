@@ -1,3 +1,5 @@
+[TOC]
+
 ## 一、Intent 核心机制详解
 
 ### 1.1 Intent 基本概念
@@ -190,7 +192,7 @@ if (intent.resolveActivity(getPackageManager()) != null) {
 
 ## 四、数据传递方式
 
-### 4.1 向下一个**Activity**传递数据
+### 4.1 向下一个 Activity 传递数据
 
 在启动Activity时传递数据的思路很简单，Intent中提供了一系列 `putExtra()` 方法的重载，可以把我们想要传递的数据暂存在 Intent 中，在启动另一个 Activity 后，只需要把这些数据从 Intent 中取出就可以了。
 
@@ -215,6 +217,8 @@ startActivity(intent);
 
 
 
+
+
 #### 4.1.2 接收方接收数据
 
 ```java
@@ -224,10 +228,6 @@ int intData = intent.getIntExtra("int_data", 0);
 boolean booleanData = intent.getBooleanExtra("boolean_data", false);
 String[] arrayData = intent.getStringArrayExtra("array_data");
 ```
-
-
-
-
 
 
 
