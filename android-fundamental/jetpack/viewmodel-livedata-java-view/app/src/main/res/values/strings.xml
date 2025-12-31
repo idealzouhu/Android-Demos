@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ViewModel LiveData Demo</string>
+    <string name="title">ViewModel &amp; LiveData 演示</string>
+    <string name="welcome_message">欢迎使用计数器</string>
+    <string name="increment">增加 +</string>
+    <string name="decrement">减少 -</string>
+    <string name="reset">重置</string>
+</resources>

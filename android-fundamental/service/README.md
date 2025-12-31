@@ -13,3 +13,4 @@
 ### 实现项目
 
 - [service-startup-java-view 项目实现.md](docs\service-startup-java-view 项目实现.md)：研究 Service 的启动方式和生命周期。
+- [foreground-service-java-view](foreground-service-java-view): 学习 Foreground Service 的使用方法。 
