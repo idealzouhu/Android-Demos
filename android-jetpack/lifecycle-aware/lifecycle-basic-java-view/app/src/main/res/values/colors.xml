@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 基础颜色 -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+    <!-- 主题色 -->
+    <color name="primary">#FF6200EE</color>
+    <color name="primary_dark">#FF3700B3</color>
+    <color name="background">#FFF5F5F5</color>
+    <color name="card_background">#FFFFFFFF</color>
+
+    <!-- 状态颜色 -->
+    <color name="state_created">#4CAF50</color>
+    <color name="state_started">#2196F3</color>
+    <color name="state_resumed">#FF9800</color>
+    <color name="state_paused">#9C27B0</color>
+    <color name="state_stopped">#F44336</color>
+    <color name="state_destroyed">#795548</color>
+
+    <!-- UI 组件颜色 -->
+    <color name="button_primary">#FF6200EE</color>
+    <color name="button_secondary">#FF03DAC5</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_tertiary">#9E9E9E</color>
+    <color name="hint">#BDBDBD</color>
+
+    <!-- 状态指示器 -->
+    <color name="state_default">#E0E0E0</color>
+    <color name="state_active">#E3F2FD</color>
+    <color name="state_border">#BDBDBD</color>
+    <color name="state_active_border">#2196F3</color>
+
+    <!-- 说明卡片 -->
+    <color name="info_background">#E8F5E9</color>
+    <color name="info_text">#2E7D32</color>
+</resources>

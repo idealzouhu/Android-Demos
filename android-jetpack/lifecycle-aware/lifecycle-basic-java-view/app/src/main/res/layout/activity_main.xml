@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <!-- 标题区域 -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Lifecycle 生命周期演示"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 当前状态卡片 -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@color/card_background"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- 状态标签 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前生命周期状态"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="8dp" />
+
+            <!-- 状态显示 -->
+            <TextView
+                android:id="@+id/tvCurrentState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="等待中..."
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/state_created"
+                android:layout_marginBottom="12dp" />
+
+            <!-- 状态说明 -->
+            <TextView
+                android:id="@+id/tvStateDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activity 尚未创建"
+                android:textSize="14sp"
+                android:textColor="@color/text_tertiary" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 生命周期状态图 -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewLifecycle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewStatus">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="生命周期流程图"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="12dp" />
+
+            <!-- 状态指示器容器 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvStateCreated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Created"
+                    android:textSize="12sp"
+                    android:padding="6dp"
+                    android:background="@drawable/state_bg_default"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="→"
+                    android:textSize="12sp"
+                    android:layout_marginHorizontal="4dp" />
+
+                <TextView
+                    android:id="@+id/tvStateStarted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Started"
+                    android:textSize="12sp"
+                    android:padding="6dp"
+                    android:background="@drawable/state_bg_default"
+                    android:layout_marginHorizontal="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="→"
+                    android:textSize="12sp"
+                    android:layout_marginHorizontal="4dp" />
+
+                <TextView
+                    android:id="@+id/tvStateResumed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resumed"
+                    android:textSize="12sp"
+                    android:padding="6dp"
+                    android:background="@drawable/state_bg_default"
+                    android:layout_marginStart="4dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="↑ ↓"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/tvStatePaused"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paused"
+                    android:textSize="12sp"
+                    android:padding="6dp"
+                    android:background="@drawable/state_bg_default"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/tvStateStopped"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stopped"
+                    android:textSize="12sp"
+                    android:padding="6dp"
+                    android:background="@drawable/state_bg_default" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 操作说明卡片 -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewInstructions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/info_background"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewLifecycle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用说明"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/info_text"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. 观察 Logcat 查看生命周期事件日志"
+                android:textSize="13sp"
+                android:textColor="@color/info_text"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. 使用返回键/Home键切换生命周期"
+                android:textSize="13sp"
+                android:textColor="@color/info_text"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. 旋转屏幕观察配置变化"
+                android:textSize="13sp"
+                android:textColor="@color/info_text"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4. 点击下方按钮触发自定义事件"
+                android:textSize="13sp"
+                android:textColor="@color/info_text" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 操作按钮区域 -->
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewInstructions">
+
+        <Button
+            android:id="@+id/btnTriggerEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="触发事件"
+            android:backgroundTint="@color/button_primary"
+            android:textColor="@color/white"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        <Button
+            android:id="@+id/btnShowCurrentState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="查看状态"
+            android:backgroundTint="@color/button_secondary"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <!-- Logcat 提示 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="💡 请在 Logcat 中查看详细生命周期日志"
+        android:textSize="12sp"
+        android:textColor="@color/hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llButtons" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
