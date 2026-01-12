@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Collapsingtoolbarbasicjavaview" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#3F51B5</item>
+        <item name="colorPrimaryDark">#303F9F</item>
+        <item name="colorAccent">#FF4081</item>
+    </style>
+
+    <style name="Theme.Collapsingtoolbarbasicjavaview" parent="Base.Theme.Collapsingtoolbarbasicjavaview" />
+
+    <!-- 为详情页专门定义的主题，用于实现透明状态栏 -->
+    <style name="DetailActivityTheme" parent="Base.Theme.Collapsingtoolbarbasicjavaview">
+        <!-- 从Android 5.0 (API 21) 开始支持状态栏颜色设置 -->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+</resources>

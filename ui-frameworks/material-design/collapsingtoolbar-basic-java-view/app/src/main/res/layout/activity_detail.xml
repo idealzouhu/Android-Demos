@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"> <!-- 关键属性，用于系统栏适配 -->
+
+    <!-- 可折叠标题栏 -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:minHeight="?attr/actionBarSize"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginBottom="48dp"
+            app:expandedTitleMarginTop="80dp"
+            app:expandedTitleGravity="bottom|start"
+            app:collapsedTitleGravity="start"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            android:fitsSystemWindows="true">
+
+            <!-- 背景图片，设置视差折叠效果 -->
+            <ImageView
+                android:id="@+id/header_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/header_bg"
+                app:layout_collapseMode="parallax"
+                android:fitsSystemWindows="true"/>
+
+            <!-- 工具栏，折叠时固定在顶部 -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- 可滚动的内容区域，其滚动会驱动标题栏折叠 -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="可折叠标题栏详解"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="向上滚动此页面，您将看到标题栏逐渐折叠的效果。背景图片会产生视差滚动，而工具栏会固定在顶部。\n\n这种设计模式源自 Material Design，非常适合用于详情页、文章阅读、产品展示等场景，能够充分利用屏幕空间，提供沉浸式的视觉体验。"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="向上滚动此页面，您将看到标题栏逐渐折叠的效果。背景图片会产生视差滚动，而工具栏会固定在顶部。\n\n这种设计模式源自 Material Design，非常适合用于详情页、文章阅读、产品展示等场景，能够充分利用屏幕空间，提供沉浸式的视觉体验。"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="向上滚动此页面，您将看到标题栏逐渐折叠的效果。背景图片会产生视差滚动，而工具栏会固定在顶部。\n\n这种设计模式源自 Material Design，非常适合用于详情页、文章阅读、产品展示等场景，能够充分利用屏幕空间，提供沉浸式的视觉体验。"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="向上滚动此页面，您将看到标题栏逐渐折叠的效果。背景图片会产生视差滚动，而工具栏会固定在顶部。\n\n这种设计模式源自 Material Design，非常适合用于详情页、文章阅读、产品展示等场景，能够充分利用屏幕空间，提供沉浸式的视觉体验。"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
