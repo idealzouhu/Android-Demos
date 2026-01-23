@@ -4,7 +4,7 @@
 
 SQLite 是一个轻量级的嵌入式关系型数据库，它不需要独立的服务器进程，数据存储在单个磁盘文件中。SQLite 是 Android 平台上最常用的本地数据库解决方案。通常，数据库文件会存放在 `/data/data/<package name>/databases/` 目录下。
 
-- SQLite不仅支持标准的SQL语法，还遵循了数据库的ACID事务
+- SQLite 不仅支持标准的SQL语法，还遵循了数据库的ACID事务
 - SQLite 运算速度非常快，占用资源很少，通常只需要几百KB的内存就足够了
 
 
@@ -371,7 +371,7 @@ public void addMultipleUsers(List<User> users) {
 
 
 
-```
+```java
 public List<User> getAllUsers() {
     List<User> userList = new ArrayList<>();
     

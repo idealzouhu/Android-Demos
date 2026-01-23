@@ -226,6 +226,12 @@ collapsing-toolbar-basic-java-view/
 
 核心在于 `CoordinatorLayout`嵌套结构中 `fitsSystemWindows`属性的处理逻辑。同版本的 Android 系统对它们的处理顺序和方式可能产生冲突，干扰了 `CollapsingToolbarLayout`折叠高度的正确计算。
 
+[Android 半途明式状态栏的坑_viewstub statusbar被挤压-CSDN博客](https://blog.csdn.net/wxz1179503422/article/details/72112176)
+
+
+
+
+
 
 
 #### 解决方案
