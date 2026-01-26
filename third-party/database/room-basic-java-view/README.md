@@ -6,33 +6,19 @@
 
 ```
 room-basic-java-view/
-
 ├── app/src/main/java/com/example/room/basic/
-
 │   ├── MainActivity.java                    # 主 Activity，包含业务逻辑
-
 │   ├── User.java                            # 用户实体类（Entity）
-
 │   ├── UserDao.java                         # 数据访问对象（DAO）
-
 │   ├── AppDatabase.java                     # Room 数据库类
-
 │   ├── UserViewModel.java                   # ViewModel，向 UI 层暴露数据
-
 │   └── UserAdapter.java                     # RecyclerView 适配器
-
 ├── app/src/main/res/
-
 │   ├── layout/
-
 │   │   ├── activity_main.xml                # 主界面布局文件（ConstraintLayout）
-
 │   │   └── item_user.xml                    # 用户列表项布局
-
 │   └── values/
-
 │       └── strings.xml                       # 字符串资源
-
 └── app/build.gradle.kts                     # 项目依赖配置
 
 ```

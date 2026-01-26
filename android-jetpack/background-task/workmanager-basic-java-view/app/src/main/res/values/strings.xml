@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">workmanager-basic-java-view</string>
+    <string name="app_title">WorkManager 示例</string>
+    <string name="start_work">启动一次性任务</string>
+    <string name="start_periodic_work">启动周期性任务</string>
+    <string name="cancel_work">取消所有任务</string>
+    <string name="status_ready">就绪</string>
+    <string name="status_work_enqueued">任务已加入队列</string>
+    <string name="status_work_running">任务运行中</string>
+    <string name="status_work_cancelled">任务已取消</string>
+</resources>
