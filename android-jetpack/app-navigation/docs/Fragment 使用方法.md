@@ -19,7 +19,7 @@ Fragment 拥有自己的生命周期，且与宿主 Activity 的生命周期紧�
 需要区分两个概念：
 
 - **Fragment 生命周期**：描述 Fragment 实例从创建到销毁的整个过程。
-- **Fragment 的视图生命周期**：描述 Fragment 所持有的 View 从创建(onCreateView())到销毁(onDestroyView())的过程。Fragment 的视图拥有**独立的** `Lifecycle`，由 Fragment 通过 `getViewLifecycleOwner()` 或 `getViewLifecycleOwnerLiveData()` 暴露。视图可能在 Fragment 仍存在时被销毁，因此若在 Fragment 中观察 LiveData 或执行与视图相关的操作，应使用 `getViewLifecycleOwner()` 而非 Fragment 本身，以避免内存泄漏或重复订阅。
+- **Fragment 的视图生命周期**：描述 Fragment 所持有的 View 从创建(`onCreateView()`)到销毁(`onDestroyView()`)的过程。Fragment 的视图拥有**独立的** `Lifecycle`，由 Fragment 通过 `getViewLifecycleOwner()` 或 `getViewLifecycleOwnerLiveData()` 暴露。视图可能在 Fragment 仍存在时被销毁，因此若在 Fragment 中观察 LiveData 或执行与视图相关的操作，应使用 `getViewLifecycleOwner()` 而非 Fragment 本身，以避免内存泄漏或重复订阅。
 
 
 另外，从图中可以看到，**Fragment 实例与它的 View 的生命周期并不同步**：View 可能已经销毁，而 Fragment 对象仍被 `FragmentManager` 持有。典型场景是 **返回栈**——当通过 `FragmentTransaction.replace()` 切换界面并 `addToBackStack(null)` 时，被替换的 Fragment 会先走 `onDestroyView()`，视图被回收以节省内存，但 Fragment 实例会保留在返回栈中，直到用户按返回键或该 Fragment 被移除。因此图中用两条线分别表示“Fragment 活到哪一步”和“视图活到哪一步”。

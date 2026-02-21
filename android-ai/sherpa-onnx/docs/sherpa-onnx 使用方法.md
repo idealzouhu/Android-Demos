@@ -73,6 +73,50 @@ zipformer，zipformer2
 
 
 
+## 三、工程优化技术
+
+工程优化技术是指在模型能力固定的前提下，通过规则、策略或外部数据来**弥补模型在特定场景下的短板**
+
+
+
+### 3.1 hotwords
+
+在 ASR（自动语音识别）系统中，[**Hotwords**（热词）](https://k2-fsa.github.io/sherpa/onnx/hotwords/index.html) 是一种**词汇增强技术**，它的核心作用是**在解码过程中临时提升特定词汇（罕见词/专有名词/个性化信息）的识别权重**，从而让系统更倾向于识别出这些词，而不是发音相似的其他词。
+
+> 注意，只有 [Offline transducer models](https://k2-fsa.github.io/sherpa/onnx/pretrained_models/offline-transducer/index.html#sherpa-onnx-offline-transducer-models) 和  [Online transducer models](https://k2-fsa.github.io/sherpa/onnx/pretrained_models/online-transducer/index.html#onnx-online-transducer-models) 这两类模型支持这个 hotwords
+
+hotwords 的核心实现原理是 **Aho-Corasick 算法**（简称 AC 算法）。这个是一种**多模式匹配算法**，专门用于在**一个长文本中同时查找多个关键词**。
+
+
+
+ASR 模型通常使用**汉字**或**BPE**作为建模单元。因此，**ASR 的 hotwords 文件里直接写汉字或英文单词即可**，系统内部会自动帮你分词。
+
+>  KWS模型（如Zipformer）通常采用**音素（Phoneme）**作为建模单元, keywords 文件里面通常都是利用 text2token工具 来转换好的。
+
+
+
+
+
+
+
+## 四、问题
+
+### KWS 所使用text2token工具和 ASR 的分词器区别
+
+text2token和 ASR 的分词器虽然都涉及“分割”，但它们处理的对象、目的和输出的结果在本质上是完全不同的。
+
+- text2token是 “**文字转声音**”。它回答的问题是：“这个词应该**怎么读**？”
+- ASR 分词器是 **“句子分零件”**。它回答的问题是：“这个句子由哪些**有意义的语言单元**组成？”
+
+| 工具/模块                    | 处理对象 (输入)                           | 建模单元 (输出)                                              | 本质                                                         |
+| :--------------------------- | :---------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| **KWS 的 text2token 工具**   | **汉字文本** (如“小爱同学”)               | **音素序列 / 拼音** (如 `x iǎo ài t óng xué`)                | **转音**。将文字的“形”转换为其对应的标准“音”，供声学模型在**声学特征层面**进行匹配。 |
+| **ASR 的分词器 (Tokenizer)** | **自然语言文本** (如“speech recognition”) | **语言学单元** (如 BPE 子词 `[“spe”, “ech”, “ re”, “cog”, “nition”]` 或 汉字 `[“语”, “音”, “识”, “别”]`) | **分词**。将自然语言序列切分为模型训练时使用的基本语义单元，用于**语言理解**层面的概率计算。 |
+
+
+
+
+
 
 
 ## 参考资料

@@ -222,6 +222,11 @@ class MainActivity : AppCompatActivity() {
             // lmConfig = getOnlineLMConfig(type = type),
             endpointConfig = getEndpointConfig(),
             enableEndpoint = true,
+            
+            // 热词仅对 transducer + modified_beam_search 生效，见 https://k2-fsa.github.io/sherpa/onnx/hotwords/index.html
+            decodingMethod = "modified_beam_search",
+            hotwordsFile = "hotwords.txt",
+            hotwordsScore = 2.0f,
         )
 
         if (ruleFsts != null) {

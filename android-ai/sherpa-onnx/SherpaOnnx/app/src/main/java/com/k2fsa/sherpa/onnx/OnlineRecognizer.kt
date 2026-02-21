@@ -301,6 +301,7 @@ fun getModelConfig(type: Int): OnlineModelConfig? {
         }
 
         8 -> {
+            // 中英双语模型，支持热词需：modelingUnit=cjkchar+bpe、bpeVocab、decodingMethod=modified_beam_search
             val modelDir = "sherpa-onnx-streaming-zipformer-bilingual-zh-en-2023-02-20"
             return OnlineModelConfig(
                 transducer = OnlineTransducerModelConfig(
@@ -310,6 +311,8 @@ fun getModelConfig(type: Int): OnlineModelConfig? {
                 ),
                 tokens = "$modelDir/tokens.txt",
                 modelType = "zipformer",
+                modelingUnit = "cjkchar+bpe",
+                bpeVocab = "$modelDir/bpe.vocab",
             )
         }
 
@@ -574,7 +577,6 @@ fun getModelConfig(type: Int): OnlineModelConfig? {
                 provider = "rknn",
             )
         }
-
     }
     return null
 }

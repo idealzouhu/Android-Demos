@@ -54,6 +54,12 @@
 
 
 
+
+
+
+
+
+
 ## 参考资料
 
 [Pre-trained models — sherpa 1.3 documentation](https://k2-fsa.github.io/sherpa/onnx/pretrained_models/index.html)
