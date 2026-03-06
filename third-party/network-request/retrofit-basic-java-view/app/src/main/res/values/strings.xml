@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">retrofit-basic-java-view</string>
+    <string name="btn_fetch_posts">请求帖子列表</string>
+</resources>

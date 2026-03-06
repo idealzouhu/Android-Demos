@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">XML 数据解析</string>
+    <string name="btn_fetch_xml">获取 XML 数据</string>
+    <string name="result_placeholder">点击上方按钮，通过 OkHttp 获取 RSS 并解析 XML 显示结果。</string>
+    <string name="loading">正在请求并解析…</string>
+    <string name="error_prefix">请求或解析失败：</string>
+</resources>
