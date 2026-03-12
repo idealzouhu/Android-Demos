@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AIDL 服务端</string>
+    <string name="server_title">AIDL 统一网关 - 服务端</string>
+    <string name="server_desc">本应用提供统一网关服务 GatewayService。\n\n请先安装并运行本应用，再在「AIDL 客户端」中绑定服务并调用 ICalculator、IGreeter 等接口。</string>
+</resources>

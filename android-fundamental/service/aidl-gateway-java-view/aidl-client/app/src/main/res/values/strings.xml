@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AIDL 客户端</string>
+    <string name="client_title">AIDL 统一网关 - 客户端</string>
+    <string name="status_not_bound">状态：未绑定</string>
+    <string name="status_bound">状态：已绑定网关</string>
+    <string name="btn_bind">绑定服务端网关</string>
+    <string name="btn_unbind">解绑</string>
+    <string name="section_calc">计算器 (ICalculator)</string>
+    <string name="btn_calc">3 + 5 = ?</string>
+    <string name="section_greeter">问候 (IGreeter)</string>
+    <string name="btn_greeter">问候 \"World\"</string>
+</resources>
