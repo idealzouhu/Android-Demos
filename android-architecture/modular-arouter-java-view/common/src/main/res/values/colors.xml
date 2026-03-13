@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="common_primary">#FF2440</color>
+    <color name="common_card_bg">#FFFFFF</color>
+    <color name="common_text_primary">#333333</color>
+    <color name="common_text_secondary">#999999</color>
+</resources>

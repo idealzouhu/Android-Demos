@@ -1,0 +1,31 @@
+plugins {
+    id("com.android.library")
+}
+
+android {
+    namespace = "com.example.modular.base"
+    compileSdk = 34
+
+    defaultConfig {
+        minSdk = 24
+    }
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("com.google.android.material:material:1.11.0")
+    implementation("com.alibaba:arouter-api:1.5.2")
+}

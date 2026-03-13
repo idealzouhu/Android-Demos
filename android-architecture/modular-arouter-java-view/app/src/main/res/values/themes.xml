@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Modular" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">#FF2440</item>
+        <item name="colorPrimaryVariant">#CC1D33</item>
+    </style>
+</resources>
