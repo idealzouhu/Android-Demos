@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LabeledEditText">
+        <attr name="let_labelText" format="string" />
+        <attr name="let_labelTextAppearance" format="reference" />
+        <attr name="let_labelMinWidth" format="dimension" />
+        <attr name="let_editTextAppearance" format="reference" />
+        <attr name="let_showClearButton" format="boolean" />
+        <attr name="let_clearIcon" format="reference" />
+        <attr name="let_clearContentDescription" format="string" />
+        <attr name="android:hint" />
+        <attr name="android:inputType" />
+        <attr name="android:imeOptions" />
+        <attr name="android:maxLines" />
+    </declare-styleable>
+</resources>

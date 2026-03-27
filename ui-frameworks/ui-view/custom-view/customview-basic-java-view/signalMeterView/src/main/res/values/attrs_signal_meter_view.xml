@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SignalMeterView">
+        <!-- 量程上限，指针按 currentValue / maxValue 映射到弧上 -->
+        <attr name="smv_maxValue" format="float" />
+        <!-- 当前值，应在 [0, maxValue] 内，超出会被钳制 -->
+        <attr name="smv_currentValue" format="float" />
+        <!-- 安全 / 警告 / 危险 弧段颜色（按弧长比例划分，见下方阈值） -->
+        <attr name="smv_safeColor" format="color" />
+        <attr name="smv_warningColor" format="color" />
+        <attr name="smv_dangerColor" format="color" />
+        <!-- 警告区起始：占整条弧的比例 [0,1)，之前为安全色 -->
+        <attr name="smv_warningFrom" format="float" />
+        <!-- 危险区起始：占整条弧的比例 (warningFrom, 1]，之前为警告色 -->
+        <attr name="smv_dangerFrom" format="float" />
+        <!-- 弧与指针描边宽度 -->
+        <attr name="smv_arcStrokeWidth" format="dimension" />
+        <attr name="smv_needleWidth" format="dimension" />
+        <!-- 是否在底部绘制数值 -->
+        <attr name="smv_showValueText" format="boolean" />
+        <attr name="smv_valueTextSize" format="dimension" />
+        <attr name="smv_valueTextColor" format="color" />
+    </declare-styleable>
+</resources>

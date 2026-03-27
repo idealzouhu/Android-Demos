@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.SignalMeterView.Sample" parent="">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="smv_arcStrokeWidth">16dp</item>
+        <item name="smv_needleWidth">3dp</item>
+        <item name="smv_valueTextSize">15sp</item>
+        <item name="smv_valueTextColor">@color/signal_meter_text_night</item>
+    </style>
+</resources>

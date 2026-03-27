@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <TextView
+        android:id="@+id/let_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="标签" />
+
+    <EditText
+        android:id="@+id/let_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        tools:hint="请输入" />
+
+    <ImageButton
+        android:id="@+id/let_clear"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_vertical"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/let_clear_default_cd"
+        android:padding="12dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/let_ic_clear"
+        android:visibility="gone" />
+
+</merge>

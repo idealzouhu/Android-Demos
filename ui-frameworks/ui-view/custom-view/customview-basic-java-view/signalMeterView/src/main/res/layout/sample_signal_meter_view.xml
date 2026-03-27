@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.customview.signalmeterview.SignalMeterView
+        style="@style/Widget.SignalMeterView.Sample"
+        android:layout_width="280dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        app:smv_currentValue="62"
+        app:smv_dangerColor="#F44336"
+        app:smv_dangerFrom="0.78"
+        app:smv_maxValue="100"
+        app:smv_safeColor="#4CAF50"
+        app:smv_showValueText="true"
+        app:smv_warningColor="#FFC107"
+        app:smv_warningFrom="0.5" />
+
+</FrameLayout>

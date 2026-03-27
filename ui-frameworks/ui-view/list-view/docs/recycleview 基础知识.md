@@ -36,11 +36,15 @@
 
 （说明：只创建屏幕可见数量 + 缓冲的 ViewHolder，滚动时回收移出屏幕的 View、绑定新数据再显示。）
 
+
+
 ### 2.2 数据绑定流程
 
 ```
 数据源 → Adapter（getItemCount / onCreateViewHolder / onBindViewHolder）→ ViewHolder → 显示
 ```
+
+
 
 ### 2.3 LayoutManager 的作用
 
@@ -80,9 +84,13 @@
 | 网格   | GridLayoutManager          | 网格列表            |
 | 瀑布流 | StaggeredGridLayoutManager | 不等高/不等宽瀑布流 |
 
+
+
 ### 3.4 分割线与间距
 
 （ItemDecoration 用法，或通过 item 布局 margin/padding 实现。）
+
+
 
 ### 3.5 点击事件
 
@@ -96,6 +104,8 @@
 - 列表数据变更用 DiffUtil / 局部刷新，避免整表 notifyDataSetChanged
 - 固定高度或 setHasFixedSize(true) 可优化性能
 - 多类型列表时正确实现 getItemViewType 与 onCreateViewHolder 分支
+
+
 
 
 

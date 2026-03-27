@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">customview-basic-java-view</string>
+    <string name="main_demo_title">自定义 View 示例</string>
+    <string name="signal_meter_demo_hint">指针在 0～量程之间循环演示，对应 onDraw 中的角度映射。</string>
+    <string name="labeled_edit_hint_account">请输入账号</string>
+    <string name="lined_note_hint">多行笔记（虚线格）</string>
+</resources>

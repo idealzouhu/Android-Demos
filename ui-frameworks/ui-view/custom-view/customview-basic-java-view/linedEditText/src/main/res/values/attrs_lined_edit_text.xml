@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LinedEditText">
+        <!-- 横线颜色 -->
+        <attr name="led_lineColor" format="color" />
+        <!-- 横线线宽 -->
+        <attr name="led_lineStrokeWidth" format="dimension" />
+        <!-- 行距：0 表示跟随 TextView#getLineHeight() -->
+        <attr name="led_lineSpacing" format="dimension" />
+        <!-- 虚线线段长度，0 表示实线 -->
+        <attr name="led_dashWidth" format="dimension" />
+        <!-- 虚线间隙 -->
+        <attr name="led_dashGap" format="dimension" />
+    </declare-styleable>
+</resources>

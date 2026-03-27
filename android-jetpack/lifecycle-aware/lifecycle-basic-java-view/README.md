@@ -3,6 +3,7 @@
 本案例演示 Android Lifecycle 组件的基本使用方法，重点展示如何通过 LifecycleObserver 监听 Activity 的生命周期变化.
 
 
+
 ### 项目结构
 
 ```
@@ -22,6 +23,8 @@ lifecycle-basic-java-view/
 ├── 📄 README.md                                  # 项目说明文档
 └── 📄 settings.gradle.kts                        # 项目设置
 ```
+
+
 
 ### 学习目标
 

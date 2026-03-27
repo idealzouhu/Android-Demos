@@ -125,6 +125,8 @@ class MyActivity extends AppCompatActivity {
 
 Lifecycle 使用两个枚举类 **Event** 和 **State** 来跟踪其关联组件的生命周期状态。
 
+**(1) 状态 State**
+
 [State](https://developer.android.google.cn/reference/androidx/lifecycle/Lifecycle.State) 是指  [`Lifecycle`](https://developer.android.google.cn/reference/androidx/lifecycle/Lifecycle?hl=zh-cn) 对象所跟踪的组件的当前状态。
 
 - **INITIALIZED**：组件已构造但未调用 onCreate
@@ -133,7 +135,7 @@ Lifecycle 使用两个枚举类 **Event** 和 **State** 来跟踪其关联组件
 - **RESUMED**：已调用 onResume，可交互
 - **DESTROYED**：已销毁
 
-
+**(2) 事件 Event**
 
 [Event](https://developer.android.google.cn/reference/androidx/lifecycle/Lifecycle.Event) 是从框架和 [`Lifecycle`](https://developer.android.google.cn/reference/androidx/lifecycle/Lifecycle?hl=zh-cn) 类分派的生命周期事件。这些事件映射到 activity 和 fragment 中的回调事件。
 
@@ -145,7 +147,7 @@ Lifecycle 使用两个枚举类 **Event** 和 **State** 来跟踪其关联组件
 - **ON_DESTROY**：对应 onDestroy 方法
 - **ON_ANY**：匹配任何事件
 
-
+**(3) 状态和事件之间的关系**
 
 状态可视作节点，事件可视作节点之间的边。官方 [*Android activity 生命周期的状态和事件*](https://developer.android.google.cn/topic/libraries/architecture/lifecycle?hl=zh-cn#lc)  图展示了这种关系：
 
@@ -236,12 +238,12 @@ myLifecycleOwner.getLifecycle().addObserver(new MyObserver());
 
 #### 2.3.1 类图
 
-| 观察者模式概念                 | Lifecycle 对应组件                              |
-| ------------------------------ | ----------------------------------------------- |
-| Subject（主题）                | `LifecycleRegistry`                             |
-| ConcreteSubject（具体主题）    | Activity/Fragment 中的 `LifecycleRegistry` 实例 |
-| Observer（观察者）             | `LifecycleObserver`                             |
-| ConcreteObserver（具体观察者） | `DefaultLifecycleObserver` 实现类               |
+| 观察者模式概念                 | Lifecycle 对应组件                                |
+| ------------------------------ | ------------------------------------------------- |
+| Subject（主题）                | `LifecycleRegistry` ，也可以说是 `LifecycleOwner` |
+| ConcreteSubject（具体主题）    | Activity/Fragment 中的 `LifecycleRegistry` 实例   |
+| Observer（观察者）             | `LifecycleObserver`                               |
+| ConcreteObserver（具体观察者） | `DefaultLifecycleObserver` 实现类                 |
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -267,10 +269,6 @@ myLifecycleOwner.getLifecycle().addObserver(new MyObserver());
 │                                                     │
 └─────────────────────────────────────────────────────┘
 ```
-
-
-
-
 
 
 
@@ -346,7 +344,7 @@ public class LifecycleRegistry extends Lifecycle {
 
 #### 2.3.3 状态转换的完整流程
 
-**注册阶段**：观察者通过 `addObserver()`注册到 LifecycleOwner
+- **注册阶段**：观察者通过 `addObserver()`注册到 LifecycleOwner
 
 **事件触发**：LifecycleOwner 的生命周期方法被调用，触发对应 Event
 
