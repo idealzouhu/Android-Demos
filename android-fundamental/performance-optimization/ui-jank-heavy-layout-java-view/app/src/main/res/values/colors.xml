@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="jank_layer_1">#FFE57373</color>
+    <color name="jank_layer_2">#FFF06292</color>
+    <color name="jank_layer_3">#FFBA68C8</color>
+    <color name="jank_layer_4">#FF9575CD</color>
+    <color name="jank_layer_5">#FF7986CB</color>
+    <color name="jank_layer_6">#FF64B5F6</color>
+    <color name="jank_layer_7">#FF4FC3F7</color>
+    <color name="jank_layer_8">#FF4DD0E1</color>
+</resources>

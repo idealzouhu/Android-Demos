@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">anr-main-blocking-java-view</string>
+    <string name="anr_demo_warning">以下按钮会在主线程或广播回调中故意阻塞，仅用于学习 ANR。点击后可能出现无响应或系统「应用无响应」对话框；广播场景可能在数秒后触发广播超时。请勿用于正式版本。</string>
+    <string name="btn_main_thread_sleep">主线程 sleep（约 15s）</string>
+    <string name="btn_main_thread_cpu">主线程密集计算（约 8s）</string>
+    <string name="btn_main_thread_io">主线程同步磁盘 I/O</string>
+    <string name="btn_prefs_commit">主线程连续 SharedPreferences.commit()</string>
+    <string name="btn_package_manager_query">主线程 getInstalledApplications()</string>
+    <string name="btn_deadlock">主线程死锁（可能需强停应用）</string>
+    <string name="btn_heavy_broadcast">发送耗时广播（onReceive 阻塞）</string>
+    <string name="toast_cpu_spin_done">密集计算结束</string>
+    <string name="toast_io_done">磁盘 I/O 结束</string>
+    <string name="toast_prefs_done">连续 commit 结束</string>
+    <string name="toast_pkg_count">已安装应用数量：%1$d</string>
+    <string name="toast_broadcast_sent">已发送广播</string>
+</resources>

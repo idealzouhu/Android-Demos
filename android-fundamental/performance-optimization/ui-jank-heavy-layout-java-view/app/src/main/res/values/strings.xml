@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ui-jank-heavy-layout-java-view</string>
+    <string name="jank_hub_intro">以下为故意制造的 UI 卡顿场景，用于 GPU 过度绘制、布局测量、列表绑定与 onDraw 等方向的练习。请在开发者选项中配合「GPU 过度绘制」与 Android Studio Profiler / 系统跟踪对照观察。</string>
+    <string name="btn_overdraw">多层全屏叠加（过度绘制）</string>
+    <string name="btn_deep_nested">极深 LinearLayout 嵌套</string>
+    <string name="btn_recycler_heavy_bind">RecyclerView 重 onBind</string>
+    <string name="btn_heavy_ondraw">自定义 View 过重 onDraw</string>
+    <string name="btn_scroll_layout_thrash">滑动时频繁 requestLayout</string>
+    <string name="title_overdraw">过度绘制</string>
+    <string name="title_deep_nested">深层嵌套布局</string>
+    <string name="title_recycler">列表绑定卡顿</string>
+    <string name="title_heavy_ondraw">过重 onDraw</string>
+    <string name="title_layout_thrash">布局抖动</string>
+    <string name="hint_overdraw">FrameLayout 内叠加多層不透明 View。开发者选项 → 调试 GPU 过度绘制 可观察颜色层级。</string>
+    <string name="hint_deep_nested">纵向 ScrollView 内数十层 LinearLayout 嵌套，测量/布局成本随深度上升。</string>
+    <string name="hint_recycler">onBindViewHolder 内构造超长字符串，滑动时主线程耗时明显。</string>
+    <string name="hint_heavy_ondraw">onDraw 中每帧 new Paint 并大量绘制；在 ScrollView 内上下滑动触发重绘。</string>
+    <string name="hint_layout_thrash">onScrollChange 中修改 header 高度并 requestLayout，易引发整树频繁 relayout。</string>
+    <string name="jank_row_label">#%1$d — 绑定阶段拼接长度 %2$d（故意变慢）</string>
+    <string name="thrash_line">占位正文行 %1$d — 上下滑动以触发 header 高度抖动</string>
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">startup-slow-launch-java-view</string>
+    <string name="startup_page_title">Startup Slow Launch Demo</string>
+    <string name="startup_intro">本示例只演示一个经典启动问题：在 `Application.onCreate()` 中同步执行重活。由于这段代码发生在首页展示前，它会直接拉长冷启动时间。</string>
+    <string name="startup_case_title">错误案例：Application.onCreate() 做重活</string>
+    <string name="startup_case_desc">当前应用启动时会在 Application 里故意执行主线程休眠和大量字符串拼接，用于模拟把重量级初始化、阻塞操作或大计算放进启动关键路径的错误写法。</string>
+    <string name="observe_title">本次启动观测结果</string>
+    <string name="startup_summary_value">Application.onCreate() 耗时：%1$d ms</string>
+    <string name="visible_summary_value">进程启动到首页可见：%1$d ms</string>
+    <string name="analysis_hint_title">如何分析</string>
+    <string name="analysis_hint_desc">可用 Android Studio Profiler、System Trace 或 `adb shell am start -W` 对比优化前后的启动时长。正确做法通常是把非首屏必需的初始化延后、异步化或按需执行。</string>
+</resources>

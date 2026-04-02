@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">memory-leak-static-holder-java-view</string>
+    <string name="leak_intro">以下为故意制造的内存泄漏写法，仅用于学习。Debug 构建已接入 LeakCanary：先点某一泄漏场景，再点「结束 Activity（finish）」或按系统返回键离开本页，回到桌面后等待通知（勿立刻从最近任务划掉进程）。\n\nLogcat 过滤标签 MainActivity 可看到 onPause 里 isFinishing：按 Home 多为 false；真正 finish 时为 true，随后应有 onDestroy。\n\n练习结束后请点「清除全部引用」。</string>
+    <string name="btn_static_activity">静态变量持有 Activity</string>
+    <string name="btn_singleton_context">单例保存 Activity Context</string>
+    <string name="btn_handler_delayed">Handler 延迟 Runnable 捕获 Activity</string>
+    <string name="btn_thread_hold">后台 Thread 捕获 Activity</string>
+    <string name="btn_static_view">静态变量持有 View（Activity Context）</string>
+    <string name="btn_static_runnable">静态持有匿名 Runnable（隐式外部类）</string>
+    <string name="btn_finish_activity">结束 Activity（finish，便于 LeakCanary）</string>
+    <string name="btn_clear_all">清除全部引用</string>
+    <string name="toast_registered">已注册泄漏场景，请返回桌面或打开别的界面后观察分析工具</string>
+    <string name="toast_cleared">已清除本 Demo 中的静态/队列引用</string>
+    <string name="leak_static_view_caption">泄漏用 TextView</string>
+</resources>
