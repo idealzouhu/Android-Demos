@@ -153,8 +153,6 @@ database-room-kotlin            # Room + Kotlin（纯逻辑）
 
 
 
-
-
 ### 2.2 技术具体项目
 
 将技术具体项目的详细文档放到技术专题下的 docs 目录里面。
