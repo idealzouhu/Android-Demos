@@ -1,0 +1,101 @@
+/*
+ * Copyright 2022 The TensorFlow Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *             http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.androidx.navigation.safeargs)
+    alias(libs.plugins.download)
+}
+
+android {
+    namespace "org.tensorflow.lite.examples.imageclassification"
+    compileSdk Integer.parseInt(libs.versions.compile.sdk.get())
+
+    defaultConfig {
+        applicationId "org.tensorflow.lite.examples.imageclassification"
+        minSdk Integer.parseInt(libs.versions.min.sdk.get())
+        targetSdk Integer.parseInt(libs.versions.target.sdk.get())
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    androidResources {
+        noCompress 'tflite'
+    }
+}
+
+// import DownloadModels task
+project.ext.ASSET_DIR = projectDir.toString() + '/src/main/assets'
+project.ext.TEST_ASSETS_DIR = projectDir.toString() + '/src/androidTest/assets'
+
+// Download default models; if you wish to use your own models then
+// place them in the "assets" directory and comment out this line.
+apply from: 'download_models.gradle'
+
+configurations.configureEach {
+    resolutionStrategy.eachDependency { details ->
+        if (details.requested.group != "org.tensorflow") {
+            return
+        }
+        def n = details.requested.name
+        if (n in ["tensorflow-lite", "tensorflow-lite-api", "tensorflow-lite-gpu"]) {
+            details.useVersion libs.versions.tflite.runtime.get()
+        }
+    }
+}
+
+dependencies {
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.google.material
+    implementation libs.androidx.constraintlayout
+
+    implementation libs.androidx.navigation.fragment.ktx
+    implementation libs.androidx.navigation.ui.ktx
+
+    implementation libs.androidx.camera.core
+    implementation libs.androidx.camera.camera2
+    implementation libs.androidx.camera.lifecycle
+    implementation libs.androidx.camera.view
+
+    implementation libs.androidx.window
+
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+
+    implementation libs.tensorflow.lite.task.vision
+    implementation libs.tensorflow.lite.gpu.delegate.plugin
+    implementation libs.tensorflow.lite.gpu
+}
