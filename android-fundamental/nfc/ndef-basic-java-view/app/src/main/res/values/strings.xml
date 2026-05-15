@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">ndef-basic-java-view</string>
+
+    <!-- Status bar -->
+    <string name="nfc_status_unsupported">设备不支持 NFC</string>
+    <string name="nfc_status_off">NFC 已关闭</string>
+    <string name="nfc_status_on">NFC 已开启</string>
+    <string name="nfc_open_settings">去开启</string>
+
+    <!-- Mode -->
+    <string name="mode_read">读取</string>
+    <string name="mode_write">写入</string>
+
+    <!-- Read panel -->
+    <string name="read_hint">请将标签贴近手机背面</string>
+    <string name="read_result_empty">尚未读取到数据</string>
+    <string name="read_clear">清空</string>
+
+    <!-- Write panel -->
+    <string name="write_hint">选择类型并输入内容，然后点击「准备写入」，再贴近标签</string>
+    <string name="write_type_text">文本（RTD_TEXT）</string>
+    <string name="write_type_uri">URI（RTD_URI）</string>
+    <string name="write_content_hint">待写入内容</string>
+    <string name="write_prepare">准备写入</string>
+    <string name="write_waiting">等待贴卡写入…</string>
+    <string name="write_result_empty">尚未写入</string>
+
+    <!-- Errors / results -->
+    <string name="error_write_empty">请先输入要写入的内容</string>
+    <string name="error_write_uri_invalid">URI 格式无效</string>
+    <string name="nfc_disabled_hint">请先开启 NFC 后再操作</string>
+
+    <!-- NdefWriter results -->
+    <string name="write_ok">写入成功</string>
+    <string name="write_not_writable">标签不可写或未识别为 NDEF</string>
+    <string name="write_size_exceeded">内容超出标签容量</string>
+    <string name="write_io_error">通信失败：%1$s</string>
+    <string name="write_format_error">格式化失败：%1$s</string>
+</resources>

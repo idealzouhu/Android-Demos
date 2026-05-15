@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">hce-pos-java-view</string>
+    <string name="hce_service_description">ICC 脚本卡模拟 — 银行卡交易联调（封闭测试）</string>
+    <string name="hce_aid_group_payment_description">PPSE / 应用 AID（须与脚本及 apdu_service.xml 一致）</string>
+
+    <string name="status_nfc_supported">NFC：支持</string>
+    <string name="status_nfc_unsupported">NFC：不支持</string>
+    <string name="status_hce_supported">HCE：支持</string>
+    <string name="status_hce_unsupported">HCE：不支持</string>
+    <string name="status_script_ok">脚本：已加载</string>
+    <string name="status_script_fail">脚本：加载失败（%1$s）</string>
+    <string name="status_script_loading">脚本：加载中…</string>
+    <string name="status_session_step">会话步骤：下一步 %1$d / 共 %2$d（触碰后由服务更新）</string>
+    <string name="status_session_step_pending">会话步骤：—（成功加载脚本后将显示步数）</string>
+    <string name="hint_default_payment">请将本应用设为默认付款应用，或在触碰付款时选择本应用，否则 POS 可能无法路由到你的 HCE 服务。替换 assets 目录下的 ICC 脚本 JSON 即可适配不同内核/案例；同时请在 apdu_service.xml 中声明脚本里 SELECT 涉及的 AID。</string>
+    <string name="action_nfc_payment_settings">打开 NFC 付款设置</string>
+    <string name="action_nfc_settings">打开 NFC 设置</string>
+</resources>

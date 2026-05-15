@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<host-apdu-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/hce_service_description"
+    android:requireDeviceUnlock="false">
+    <aid-group
+        android:category="payment"
+        android:description="@string/hce_aid_group_payment_description">
+        <aid-filter android:name="325041592E5359532E4444463031" />
+        <aid-filter android:name="A0000006581010" />
+<!--        &lt;!&ndash;quics AID&ndash;&gt;-->
+<!--        <aid-prefix-filter android:name="A000000333" />-->
+<!--        &lt;!&ndash;rupay AID&ndash;&gt;-->
+<!--        <aid-prefix-filter android:name="A000000524" />-->
+<!--        &lt;!&ndash;JCB AID&ndash;&gt;-->
+<!--        <aid-prefix-filter android:name="A000000065" />-->
+<!--        &lt;!&ndash;VISA MSD AID&ndash;&gt;-->
+<!--        <aid-prefix-filter android:name="A000000003" />-->
+<!--        &lt;!&ndash;mastercard AID&ndash;&gt;-->
+<!--        <aid-prefix-filter android:name="A000000004" />-->
+<!--        &lt;!&ndash;Discover AID&ndash;&gt;-->
+<!--        <aid-prefix-filter android:name="A000000152" />-->
+<!--        &lt;!&ndash;PURE AID&ndash;&gt;-->
+<!--        <aid-prefix-filter android:name="D999999999" />-->
+<!--        &lt;!&ndash;Amex AID&ndash;&gt;-->
+<!--        <aid-prefix-filter android:name="A000000025" />-->
+    </aid-group>
+</host-apdu-service>
