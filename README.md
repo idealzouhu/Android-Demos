@@ -6,37 +6,50 @@
 
 ## 🐌学习示例
 
-### (1) Kotlin 教程
+### (1) 核心能力 (Core Areas)
 
-- [coroutines](kotlin-language\coroutines\docs\README.md):  创建模拟两位选手之间的比赛进度的 Race Tracker 应用，学习如何在 Android 应用生命周期中使用协程并进行单元测试。
-
-
-
-### (2) Android 界面教程
-
-- [compose-basics](compose-basics\docs\README.md) : 从0到1了解 Jetpack Compose，主要学习 [ Android Basics with Compose  | Android Developers](https://developer.android.google.cn/courses/android-basics-compose/course?hl=zh-cn) 中的 Jetpack Compose 官方案例。
-
-- list-view：学习 ListView、CycleView 的设计。
+- [后台任务](core-areas\background-work\services\README.md)：Service、WorkManager、Broadcast
+- [数据存储](core-areas\data-storage\database\README.md)：SQLite、Room、DataStore、ContentProvider
+- [媒体](core-areas\media\audio\README.md)：音频、视频、相机、通知
+- [权限](core-areas\permission\README.md)
+- [连接性 / NFC](core-areas\connectivity\nfc\README.md)
 
 
 
-### (3) Android 基础教程
+### (2) 用户界面 (User Interfaces)
 
-- [activity-lifecycle](android-fundamentals\activity-lifecycle\docs\README.md) : 学习 Activity 的基本使用方法，并了解 Activity 的生命周期。
+- [Compose 官方案例](user-interfaces\compose\compose-practices\README.md)：从 0 到 1 了解 Jetpack Compose，主要学习 [Android Basics with Compose](https://developer.android.google.cn/courses/android-basics-compose/course?hl=zh-cn) 中的官方案例
+- [Views](user-interfaces\view\README.md)：ListView、RecyclerView、自定义 View
+- [Material Design](user-interfaces\material\README.md)
 
 
 
-### (4) 第三方库
+### (3) 应用架构 (App Architecture)
 
-- [network-request](third-party\network-request\docs\README.md) ：采用 `Retrofit` 获取互联网数据，并利用 `kotlinx.serialization` 转换器将 JSON 对象转换为 Kotlin 对象，同时使用  `Coil` 下载和显示图片。同时，了解如何将代码设计成界面层和数据层，并使用容器和 `Application` 类来实现依赖注入。
--  [database](third-party\database\docs\README.md) ：使用 `Room` 库在 Android 应用中轻松创建和使用关系型数据库 SQLite。
--  [data-persistence](third-party\DessertRelease\docs\README.md) : 利用`Preferences DataStore` 存储键值对，并了解如何使用 DataStore 在设备上存储用户偏好设置。
--  [background-work](third-party\background-work\docs\README.md) : 了解何时以及如何使用 `WorkManager` 处理后台工作，并学会使用后台任务检查器调试 WorkManager。
--  [qrcode-scanner](third-party\qrcode-scanner\docs\README.md) ：了解如何使用 `zxing-android-embedded` 扫码。
+- [Activity](app-architecture\activities\README.md)：Activity 生命周期与基本用法
+- [Intent](app-architecture\intents\README.md)：Intent 与 Intent Filter
+- [应用导航](app-architecture\app-navigation\README.md)：Navigation、Fragment、ViewPager2
+- [Lifecycle / ViewModel](app-architecture\lifecycle-aware\README.md)
+- [组件化](app-architecture\app-modularization\README.md)
+- [性能优化](app-architecture\performance-optimization\README.md)
+
+
+
+### (4) 语言与平台
+
+- [Kotlin 协程](kotlin-language\coroutines\README.md)：Race Tracker 官方案例
+- [NDK](app-ndk\README.md)
+- [AI on Android](app-ai\README.md)
+
+
+
+### (5) 扩展库
+
+- [网络请求](extensions\network\README.md)：Retrofit、JSON/XML 解析
+- [扫码](extensions\qrcode-scanner\README.md)：zxing-android-embedded
 
 
 
 ## 🥀结语
 
 感谢您访问本项目！希望这些示例能够为您的学习与开发提供帮助。如果您觉得这些内容对您有价值，欢迎给项目点赞⭐️，您的支持是我不断更新和完善的动力！
-
