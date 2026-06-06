@@ -19,6 +19,4 @@
 
 ### 平台基础
 
-- [context](app-fundamental\context\README.md)
-- [log](app-fundamental\log\README.md)
-- [thread](app-fundamental\thread\README.md)
+- [app-fundamental](app-fundamental\README.md)
