@@ -1,8 +1,10 @@
+[TOC]
+
 ## 一、Context 概述
 
 ### 1.1 什么是 Context
 
-**Context** 是一个抽象类，它的实现由 Android 系统提供。可以理解为：
+[`Context`](https://developer.android.google.cn/reference/android/content/Context?hl=zh-cn) 是一个抽象类，它的实现由 Android 系统提供。可以理解为：
 
 - **当前应用环境的“上下文”信息**
 - **连接应用组件与系统服务的桥梁**
@@ -13,8 +15,6 @@
 ### 1.2 Context 的主要作用
 
 #### 1.2.1 访问应用资源
-
-
 
 ```java
 // 获取字符串资源

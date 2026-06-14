@@ -4,13 +4,13 @@
 
 ### 应用组件
 
-- [activities](activities\README.md)
-- [intents](intents\README.md)
+- [activities](activities\README.md)：Activity 生命周期与基本用法
+- [intents](intents\README.md)：Intent 与 Intent Filter
 
 ### 架构与导航
 
 - [lifecycle-aware](lifecycle-aware\README.md)
-- [app-navigation](app-navigation\README.md)
+- [app-navigation](app-navigation\README.md)：Navigation、Fragment、ViewPager2
 - [app-modularization](app-modularization\README.md)
 
 ### 性能

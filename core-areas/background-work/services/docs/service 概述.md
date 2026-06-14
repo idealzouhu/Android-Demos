@@ -4,6 +4,10 @@
 
 [Android Service](https://developer.android.google.cn/develop/background-work/services) 是 Android 系统中的四大组件之一，用于在后台执行长时间运行的操作，不提供用户界面。Service 可以在应用处于后台时继续运行，即使应用被销毁，Service 也可以独立运行。
 
+需要注意的是，**Service并不是运行在一个独立的进程当中的**，而是依赖于创建Service时所在的应用程序进程。当某个应用程序进程被杀掉时，所有依赖于该进程的Service也会停止运行
+
+另外，也不要被Service的后台概念所迷惑，实际上Service并不会自动开启线程，所有的代码都是默认运行在主线程当中的。也就是说，我们**需要在Service的内部手动创建子线程，并在这里执行具体的任务**，否则就有可能出现主线程被阻塞的情况。
+
 
 
 ### 1.2 Service 类型

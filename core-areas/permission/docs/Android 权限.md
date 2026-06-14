@@ -1,3 +1,5 @@
+[TOC]
+
 ## 一、Android 权限机制
 
 ### 1.1 什么是 Android 权限机制
